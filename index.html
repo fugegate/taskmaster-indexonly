@@ -5,10 +5,34 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TaskMaster AI - Smart Task Management</title>
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script type="module" src="https://cdn.skypack.dev/lucide-react"></script>
+
+    <!-- React and ReactDOM via CDN -->
+    <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
   </head>
-  <body>
+  <body class="bg-gray-100 font-poppins">
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Your Main App Entry -->
+    <script type="module">
+      import React from 'https://cdn.skypack.dev/react';
+      import ReactDOM from 'https://cdn.skypack.dev/react-dom';
+
+      // Importing Main App
+      import App from './src/App.tsx';
+
+      ReactDOM.createRoot(document.getElementById('root')).render(
+        React.createElement(React.StrictMode, null, React.createElement(App))
+      );
+    </script>
   </body>
 </html>
